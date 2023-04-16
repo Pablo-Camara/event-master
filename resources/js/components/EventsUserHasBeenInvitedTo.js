@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { trans } from '../helpers/translation';
 
-function Example() {
+function EventsUserHasBeenInvitedTo() {
     return (
         <div className="container">
             <div className="row justify-content-center">
                 <div className="col-md-8">
                     <div className="card">
-                        <div className="card-header">Example Component</div>
+                        <div className="card-header">{trans('Events you have been invited to')}</div>
 
                         <div className="card-body">I'm an example component!</div>
                     </div>
@@ -17,8 +18,8 @@ function Example() {
     );
 }
 
-export default Example;
+export default EventsUserHasBeenInvitedTo;
 
-if (document.getElementById('example')) {
-    ReactDOM.render(<Example />, document.getElementById('example'));
+if (document.getElementById('events-user-has-been-invited-to')) {
+    ReactDOM.render(<EventsUserHasBeenInvitedTo />, document.getElementById('events-user-has-been-invited-to'));
 }
