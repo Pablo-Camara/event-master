@@ -13,4 +13,5 @@ require('./bootstrap');
  */
 
 require('./components/HighlightedEvents');
+require('./components/NextEvents');
 require('./components/EventsUserHasBeenInvitedTo');
