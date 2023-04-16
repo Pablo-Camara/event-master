@@ -15,4 +15,5 @@ require('./bootstrap');
 require('./components/HighlightedEvents');
 require('./components/NextEvents');
 require('./components/EventsHappeningRightNow');
+require('./components/PastEvents');
 require('./components/EventsUserHasBeenInvitedTo');
