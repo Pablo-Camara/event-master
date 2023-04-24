@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <form method="POST" action="{{ route('users.update', $user) }}">
     @csrf
     @method('PUT')
@@ -9,3 +12,4 @@
     @endforeach
     <button type="submit">Save</button>
 </form>
+@endsection

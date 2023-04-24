@@ -1,4 +1,7 @@
-<table>
+@extends('layouts.app')
+
+@section('content')
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>Name</th>
@@ -18,3 +21,4 @@
         @endforeach
     </tbody>
 </table>
+@endsection
