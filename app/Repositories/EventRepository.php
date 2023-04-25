@@ -19,9 +19,9 @@ class EventRepository
             return EventOccurrence::whereHas('event', function ($query) {
                 $query->where('highlighted', true);
             })->with('event')
-            ->where('occurrence_date', '=', $formattedDate)
-            ->where('start_time', '>', $formattedTime)
-            ->orderBy('start_time')
+            ->where('occurrence_date', '>=', $formattedDate)
+            ->whereRaw("CONCAT(occurrence_date, ' ', start_time) >= ?", [$formattedDate . ' ' . $formattedTime])
+            ->orderByRaw("CONCAT(occurrence_date, ' ', start_time) ASC")
             ->get();
         } catch (\Throwable $th) {
             // @TODO: capture exception for ex with sentry
