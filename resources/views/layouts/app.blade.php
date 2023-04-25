@@ -10,11 +10,17 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    @if(isset($translations))
+
     <script>
-        window.translations = @json($translations);
+        @if(isset($translations))
+            window.translations = @json($translations);
+        @endif
+
+        @if(isset($nextHighlightedEventOccurrences))
+            const nextHighlightedEventOccurrences = @json($nextHighlightedEventOccurrences);
+        @endif
     </script>
-    @endif
+
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
